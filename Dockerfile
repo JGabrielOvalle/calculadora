@@ -25,4 +25,7 @@ COPY --chown=kotlin:kotlin --from=build /data/${APP_PATH} /opt/app/app.jar
 USER kotlin
 EXPOSE 8080
 
+
+
+
 CMD ["java", "-javaagent:/opt/newrelic/newrelic.jar", "-jar", "/opt/app/app.jar"]
